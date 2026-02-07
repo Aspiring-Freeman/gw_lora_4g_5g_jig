@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Release",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/software/src/main.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/software",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/software/src"
+            }
+        },
+        {
+            "name": "Debug",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/software/src/main.py",
+            "args": ["--debug"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/software",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/software/src"
+            }
+        },
+        {
+            "name": "Debug (指定配置)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/software/src/main.py",
+            "args": ["--debug", "--config", "config/products/my-lorawan.yaml"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/software",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/software/src"
+            }
+        }
+    ]
+}

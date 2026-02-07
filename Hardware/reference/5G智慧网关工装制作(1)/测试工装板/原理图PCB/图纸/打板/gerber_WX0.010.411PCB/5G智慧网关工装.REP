@@ -1,0 +1,36 @@
+*************************************************************
+FileName = 5G智慧网关工装.GBR
+AutoAperture = True
+*************************************************************
+Generating : Drill Drawing
+      File : 5G智慧网关工装.GD1
+
+    Adding Layer      : Mechanical 1
+
+    Adding Drill Pair : Component Side-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : 5G智慧网关工装.GG1
+
+    Adding Layer      : Mechanical 1
+
+    Adding Drill Pair : Component Side-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D10
+    D11
+*************************************************************
+

@@ -1,0 +1,43 @@
+{
+    // Python 设置
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.analysis.typeCheckingMode": "basic",
+    
+    // 编辑器设置
+    "editor.formatOnSave": true,
+    "editor.rulers": [100],
+    "editor.tabSize": 4,
+    
+    // 文件设置
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.associations": {
+        "*.yaml": "yaml",
+        "*.yml": "yaml"
+    },
+    
+    // 排除不需要显示的文件
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.pytest_cache": true,
+        "**/History": true,
+        "**/__Previews": true
+    },
+    
+    // 搜索排除
+    "search.exclude": {
+        "**/hardware/**/History": true,
+        "**/hardware/**/__Previews": true,
+        "**/*.PcbDoc": true,
+        "**/*.SchDoc": true
+    },
+    
+    // Markdown 设置
+    "markdown.preview.fontSize": 14,
+    
+    // YAML 设置
+    "[yaml]": {
+        "editor.tabSize": 2
+    }
+}

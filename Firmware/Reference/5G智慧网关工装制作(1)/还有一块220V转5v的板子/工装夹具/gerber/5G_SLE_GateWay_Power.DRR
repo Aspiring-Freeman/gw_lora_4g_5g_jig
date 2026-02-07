@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: 5G_SLE_GateWay_Power.PcbDoc   2024/9/9  14:49:30
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : 5G_SLE_GateWay_Power-RoundHoles.TXT
+ASCII SlotHoles File : 5G_SLE_GateWay_Power-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      12mil (0.305mm)                                           Round             34        PTH        6.96inch (176.87mm)
+T2      35mil (0.9mm)                                             Round             2         PTH        0.10inch (2.54mm)
+T3      39mil (1mm)                                               Round             10        PTH        4.17inch (106.03mm)
+T4      41mil (1.05mm)                                            Round             6         PTH        0.50inch (12.70mm)
+T5      43mil (1.1mm)                                             Round             8         PTH        4.81inch (122.20mm)
+T6      47mil (1.2mm)                                             Round             2         PTH        0.30inch (7.50mm)
+T7      63mil (1.6mm)                                             Slot              2         PTH        1.35inch (34.18mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              64
+
+Total Processing Time (hh:mm:ss) : 00:00:00

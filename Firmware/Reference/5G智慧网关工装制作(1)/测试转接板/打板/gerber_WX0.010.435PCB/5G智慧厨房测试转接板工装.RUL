@@ -1,0 +1,9 @@
+DRC Rules Export File for PCB: D:\nochineseroad\xiangmu2024\5G智慧网关工装制作\测试转接板\打板\5G智慧厨房测试转接板工装.PcbDoc
+RuleKind=Clearance|RuleName=VIA-VIA|Scope=Board|Minimum=20.00
+RuleKind=Clearance|RuleName=VIA-PAD|Scope=Board|Minimum=15.00
+RuleKind=Clearance|RuleName=VIA-TRACK|Scope=Board|Minimum=15.00
+RuleKind=Clearance|RuleName=Polygon|Scope=Board|Minimum=20.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=7.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=8.00
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0

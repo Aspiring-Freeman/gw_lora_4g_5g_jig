@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: D:\nochineseroad\xiangmu2024\5G智慧网关工装制作\还有一块220V转5v的板子\工装夹具\gerber\5G_SLE_GateWay_Power.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=5g_sle_gateway_power-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=5g_sle_gateway_power-slotholes.txt|DrillLayers=gtl,gbl

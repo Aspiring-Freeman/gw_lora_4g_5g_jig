@@ -1,0 +1,10 @@
+Output: Test Point Report
+Type  : Test Points
+From  : Project [Free Documents]
+   Generated File[Fabrication Testpoint Report for 转接板工装.ipc]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 9:30:53 On 2026/1/30

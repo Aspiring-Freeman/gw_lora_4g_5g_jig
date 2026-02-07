@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Free Documents]
+   Generated File[5G智慧网关工装.TXT]
+   Generated File[5G智慧网关工装.LDP]
+   Generated File[5G智慧网关工装.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 9:36:14 On 2024/9/6

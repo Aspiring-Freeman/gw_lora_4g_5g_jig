@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Free Documents]
+   Generated File[5G智慧厨房测试转接板工装.TXT]
+   Generated File[5G智慧厨房测试转接板工装.LDP]
+   Generated File[5G智慧厨房测试转接板工装.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 16:16:50 On 2025/11/10

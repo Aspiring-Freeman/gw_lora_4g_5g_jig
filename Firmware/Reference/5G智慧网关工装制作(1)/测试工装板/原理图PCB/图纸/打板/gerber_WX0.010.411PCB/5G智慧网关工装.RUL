@@ -1,0 +1,9 @@
+DRC Rules Export File for PCB: D:\nochineseroad\xiangmu2024\5G智慧网关工装制作\测试工装板\原理图PCB\图纸\打板\gerber_WX0.010.411PCB\5G智慧网关工装.PcbDoc
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=8.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=7.00
+RuleKind=Clearance|RuleName=Polygon|Scope=Board|Minimum=20.00
+RuleKind=Clearance|RuleName=VIA-TRACK|Scope=Board|Minimum=15.00
+RuleKind=Clearance|RuleName=VIA-PAD|Scope=Board|Minimum=15.00
+RuleKind=Clearance|RuleName=VIA-VIA|Scope=Board|Minimum=20.00
