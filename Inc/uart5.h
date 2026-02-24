@@ -3,17 +3,17 @@
 #include "main.h"
 struct UARTOpStruct
 {
-    uint8_t *TxBuf; //·¢ËÍÊı¾İÖ¸Õë
-    uint8_t TxLen;  //´ı·¢ËÍÊı¾İ³¤¶È
-    uint8_t TxOpc;  //ÒÑ·¢ËÍÊı¾İ³¤¶È
-    uint8_t *RxBuf; //½ÓÊÕÊı¾İÖ¸Õë
-    uint8_t RxLen;  //´ı½ÓÊÕÊı¾İ³¤¶È
-    uint8_t RxOpc;  //ÒÑ½ÓÊÕÊı¾İ³¤¶È
+    uint8_t *TxBuf; // å‘é€æ•°æ®æŒ‡é’ˆ
+    uint16_t TxLen; // å‘é€æ•°æ®é•¿åº¦
+    uint16_t TxOpc; // å·²å‘é€æ•°æ®é•¿åº¦
+    uint8_t *RxBuf; // æ¥æ”¶æ•°æ®æŒ‡é’ˆ
+    uint16_t RxLen; // æ¥æ”¶æ•°æ®é•¿åº¦
+    uint16_t RxOpc; // å·²æ¥æ”¶æ•°æ®é•¿åº¦
 };
-extern uint16_t chaoshi_dengdai;
+extern volatile uint16_t chaoshi_dengdai;
 void UART5_MF_Config_Init(void);
 void Uart5_Rx_rec(void);
 void UART5_IRQHandler(void);
-void Uart5_Tx_Send(uint8_t zufuchua[],uint16_t lenth);
+void Uart5_Tx_Send(uint8_t zufuchua[], uint16_t lenth);
 void Uart5_Tx_Send_init(void);
 #endif

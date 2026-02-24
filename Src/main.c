@@ -8,8 +8,8 @@
 #include "LED_CTRL.h"
 #include "Test_List.h"
 #include "WTD.h"
-uint8_t Debug_Mode = 1;
-
+uint8_t Debug_Mode = 0;
+uint16_t Debug_print_time = 10000;
 void test_Init()
 {
 	Others_GPIO_Init();
@@ -18,39 +18,48 @@ void test_Init()
 	UART0_MF_Config_Init();
 	ATIM_Init();
 	MF_ADC_PC10_Config_Init();
-	//¹¤Î»¼ì²â
+	// ï¿½ï¿½Î»ï¿½ï¿½ï¿½
 	gongwei_jiance();
-	//Ö÷¿Ø°åÅäÖÃ³õÊ¼»¯
+	// ï¿½ï¿½ï¿½Ø°ï¿½ï¿½ï¿½ï¿½Ã³ï¿½Ê¼ï¿½ï¿½
 	test_start_Init();
-	//¿´ÃÅ¹·
+	// ï¿½ï¿½ï¿½Å¹ï¿½
 	WatchDog_Init();
 }
 
 int main(void)
 {
-    /* Initialize FL Driver Library */
-    /* SHOULD BE KEPT!!! */
-    FL_Init();
+	/* Initialize FL Driver Library */
+	/* SHOULD BE KEPT!!! */
+	FL_Init();
 
-    /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-    /* SHOULD BE KEPT!!! */
-    MF_Clock_Init();
+	/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+	/* SHOULD BE KEPT!!! */
+	MF_Clock_Init();
 
-    /* Initialize all configured peripherals */
-    /* SHOULD BE KEPT!!! */
-    test_Init();
-    //SPI_RW_Demo();
+	/* Initialize all configured peripherals */
+	/* SHOULD BE KEPT!!! */
+	test_Init();
+	// SPI_RW_Demo();
 
-    while(1)
-    {
-			LED_On();
-			Uart5_Rx_rec();
-			Uart1_Rx_rec();
-			Uart0_Rx_rec();
-			LED_FLAG_LOOP();
-			test_Loop_Func();
-			FL_IWDT_ReloadCounter(IWDT);
-    }
+	// å¯åŠ¨æ ‡è¯† - ç¡®è®¤å·¥è£…æµ‹è¯•ç¨‹åºå·²è¿è¡Œ
+	DeBug_print("\r\n==========================================\r\n");
+	DeBug_print("5G Gateway Tester V1.0 Started!\r\n");
+	DeBug_print("Current Station: %d\r\n", Test_jiejuo_jilu.gongwei);
+	DeBug_print("Debug_Mode: %d\r\n", Debug_Mode);
+	DeBug_print("==========================================\r\n\r\n");
+
+	while (1)
+	{
+		if (Debug_print_time == 0) // ä¿®å¤ï¼šä½¿ç”¨ == è¿›è¡Œæ¯”è¾ƒ
+		{
+			Debug_print_time = 10000;
+			DeBug_print("[Debug] Still alive, station=%d\r\n", Test_jiejuo_jilu.gongwei);
+		}
+		Uart5_Rx_rec();
+		Uart1_Rx_rec();
+		Uart0_Rx_rec();
+		LED_FLAG_LOOP();
+		test_Loop_Func();
+		FL_IWDT_ReloadCounter(IWDT);
+	}
 }
-
-

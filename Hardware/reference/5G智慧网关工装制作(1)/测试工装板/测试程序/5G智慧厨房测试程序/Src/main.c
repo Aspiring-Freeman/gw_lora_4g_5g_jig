@@ -8,7 +8,7 @@
 #include "LED_CTRL.h"
 #include "Test_List.h"
 #include "WTD.h"
-uint8_t Debug_Mode = 0;
+uint8_t Debug_Mode = 1;
 
 void test_Init()
 {

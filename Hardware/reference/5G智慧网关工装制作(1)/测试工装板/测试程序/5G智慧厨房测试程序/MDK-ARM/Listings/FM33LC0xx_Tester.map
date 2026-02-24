@@ -2083,33 +2083,33 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       910         50          0          0          0      59015   adc_chk.o
-       356         42          0          0          0      12762   fm33lg0xx_fl.o
-      1334         24          0          0          0      60470   fm33lg0xx_fl_adc.o
-       490         16          0          0          0      68643   fm33lg0xx_fl_atim.o
-       668         82          0          0          0      28571   fm33lg0xx_fl_cmu.o
-         0          0          0          0          0      23940   fm33lg0xx_fl_comp.o
-       564         18          0          0          0      23859   fm33lg0xx_fl_gpio.o
-       318         16          0          0          0       5908   fm33lg0xx_fl_iwdt.o
-       772         36          0          0          0      40223   fm33lg0xx_fl_uart.o
-      1004        118          0          0          0      29354   gpio.o
-        72         16          0          2          0       1347   led_ctrl.o
-       108          8          0          1          0       4242   main.o
-       132         10          0          0          0      70644   mf_config.o
-       620         26          0          5        200       2816   pc_xieyi_ctrl.o
-        28          8        192          0       2048        772   startup_fm33lg0xx.o
-       776        102          0         12          0       2479   system_fm33lg0xx.o
-       946        208          0          2         92      22763   test_list.o
-       344         48          0          0          0      35450   time.o
-       488         96          0         55          0       3642   tongxin_xieyi_ctrl.o
-       678         84          0          6        616       7388   uart0.o
-       878        104          0          6        616      10752   uart1.o
-       666         86          0          8        616      18918   uart5.o
-        48         10          0          0          0        636   wtd.o
-      1168         42          0          2         30      28281   zdina219.o
+       910         50          0          0          0      60023   adc_chk.o
+       356         42          0          0          0      13146   fm33lg0xx_fl.o
+      1334         24          0          0          0      60902   fm33lg0xx_fl_adc.o
+       490         16          0          0          0      69123   fm33lg0xx_fl_atim.o
+       668         82          0          0          0      28907   fm33lg0xx_fl_cmu.o
+         0          0          0          0          0      23988   fm33lg0xx_fl_comp.o
+       564         18          0          0          0      24291   fm33lg0xx_fl_gpio.o
+       318         16          0          0          0       6148   fm33lg0xx_fl_iwdt.o
+       772         36          0          0          0      40511   fm33lg0xx_fl_uart.o
+      1004        118          0          0          0      30554   gpio.o
+        72         16          0          2          0       1491   led_ctrl.o
+       108          8          0          1          0       4482   main.o
+       132         10          0          0          0      70980   mf_config.o
+       620         26          0          5        200       3056   pc_xieyi_ctrl.o
+        28          8        192          0       2048        820   startup_fm33lg0xx.o
+       776        102          0         12          0       2671   system_fm33lg0xx.o
+       946        208          0          2         92      23291   test_list.o
+       344         48          0          0          0      35786   time.o
+       488         96          0         55          0       3930   tongxin_xieyi_ctrl.o
+       678         84          0          6        616       7964   uart0.o
+       878        104          0          6        616      11520   uart1.o
+       666         86          0          8        616      19590   uart5.o
+        48         10          0          0          0        684   wtd.o
+      1168         42          0          2         30      29241   zdina219.o
 
     ----------------------------------------------------------------------
-     13388       1250        224        100       4220     562875   Object Totals
+     13388       1250        224        100       4220     573099   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         20          0          0          1          2          0   (incl. Padding)
 
@@ -2166,8 +2166,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     17388       1388        224        100       4220     556967   Grand Totals
-     17388       1388        224        100       4220     556967   ELF Image Totals
+     17388       1388        224        100       4220     567191   Grand Totals
+     17388       1388        224        100       4220     567191   ELF Image Totals
      17388       1388        224        100          0          0   ROM Totals
 
 ==============================================================================

@@ -5,45 +5,44 @@
 #include "Test_List.h"
 uint8_t send_xieyi_data[200];
 
-
-void TONGXIN_xieyijiexi(uint8_t zufuchua[],uint16_t lenth)
+void TONGXIN_xieyijiexi(uint8_t zufuchua[], uint16_t lenth)
 {
 	uint16_t pHead = 0;
 	uint16_t shujuyu_changdu = 0;
-	while(1)
+	while (1)
 	{
-		if(pHead+21>lenth)
+		if (pHead + 21 > lenth)
 		{
 			break;
 		}
-		if(zufuchua[pHead]==0x68)
+		if (zufuchua[pHead] == 0x68)
 		{
-			if(zufuchua[pHead+7]==0x68)
+			if (zufuchua[pHead + 7] == 0x68)
 			{
-				//»ñÈ¡Êý¾ÝÓò³¤¶È
-				shujuyu_changdu = zufuchua[pHead+10];
-				shujuyu_changdu = shujuyu_changdu<<8;
-				shujuyu_changdu += zufuchua[pHead+9];
-				if(zufuchua[pHead+12+shujuyu_changdu]==0x16)
+				// ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ò³¤¶ï¿½
+				shujuyu_changdu = zufuchua[pHead + 10];
+				shujuyu_changdu = shujuyu_changdu << 8;
+				shujuyu_changdu += zufuchua[pHead + 9];
+				if (zufuchua[pHead + 12 + shujuyu_changdu] == 0x16)
 				{
-				//Ð£ÑéÍê³É£¬½ÓÏÂÀ´ÊÇÐ­Òé½âÎö²¿·Ö
-				//¿ØÖÆÂë
-				if(zufuchua[pHead+8]==0x84)
-				{
-					//1008
-					if(zufuchua[pHead+18] == 0x09&&zufuchua[pHead+19] == 0x10)
+					// Ð£ï¿½ï¿½ï¿½ï¿½É£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+					// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+					if (zufuchua[pHead + 8] == 0x84)
 					{
-						//Ö÷µçµçÑ¹¶ÁÈ¡
+						// 1008
+						if (zufuchua[pHead + 18] == 0x09 && zufuchua[pHead + 19] == 0x10)
+						{
+							// ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½È¡
 
-						 //119Êý¾Ý´¦Àí
-						
-							//½ÓÊÕµ½Ö¸ÁîÁ¢¿Ì½øÈëÏÂÒ»²½
-					
-						 Test_quanju_canshu_L.time_softdelay_ms = 0;
+							// 119ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ï¿½
+
+							// ï¿½ï¿½ï¿½Õµï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+
+							Test_quanju_canshu_L.time_softdelay_ms = 0;
+						}
 					}
-				}
-				//Ð­Òé½âÎö²¿·Ö½áÊø
-				pHead = pHead+10+shujuyu_changdu;
+					// Ð­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½
+					pHead = pHead + 10 + shujuyu_changdu;
 				}
 			}
 		}
@@ -55,7 +54,7 @@ void TONGXIN_xieyifasong()
 	uint16_t send_data_lenth = 0;
 	uint16_t hejiaoyan = 0;
 	send_xieyi_data[send_data_lenth++] = 0x68;
-	//±íºÅ00 00 00 01 00 00
+	// ï¿½ï¿½ï¿½ï¿½00 00 00 01 00 00
 	send_xieyi_data[send_data_lenth++] = 0x00;
 	send_xieyi_data[send_data_lenth++] = 0x00;
 	send_xieyi_data[send_data_lenth++] = 0x00;
@@ -63,12 +62,12 @@ void TONGXIN_xieyifasong()
 	send_xieyi_data[send_data_lenth++] = 0x00;
 	send_xieyi_data[send_data_lenth++] = 0x00;
 	send_xieyi_data[send_data_lenth++] = 0x68;
-	//¿ØÖÆÂë
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	send_xieyi_data[send_data_lenth++] = 0x04;
-	//Êý¾ÝÓò³¤¶È
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ò³¤¶ï¿½
 	send_xieyi_data[send_data_lenth++] = 0x0A;
 	send_xieyi_data[send_data_lenth++] = 0x00;
-	//ÏµÍ³Ê±ÖÓ24 09 20 13 22 01 16
+	// ÏµÍ³Ê±ï¿½ï¿½24 09 20 13 22 01 16
 	send_xieyi_data[send_data_lenth++] = 0x24;
 	send_xieyi_data[send_data_lenth++] = 0x09;
 	send_xieyi_data[send_data_lenth++] = 0x20;
@@ -76,21 +75,18 @@ void TONGXIN_xieyifasong()
 	send_xieyi_data[send_data_lenth++] = 0x22;
 	send_xieyi_data[send_data_lenth++] = 0x01;
 	send_xieyi_data[send_data_lenth++] = 0x16;
-	//Êý¾Ý±êÊ¶
+	// ï¿½ï¿½ï¿½Ý±ï¿½Ê¶
 	send_xieyi_data[send_data_lenth++] = 0x09;
 	send_xieyi_data[send_data_lenth++] = 0x10;
-	//Ð­Òé°üÊý
+	// Ð­ï¿½ï¿½ï¿½ï¿½ï¿½
 	send_xieyi_data[send_data_lenth++] = 0x00;
 	send_xieyi_data[send_data_lenth] = 0;
-	for(hejiaoyan=0;hejiaoyan<send_data_lenth;hejiaoyan++)
+	for (hejiaoyan = 0; hejiaoyan < send_data_lenth; hejiaoyan++)
 	{
-		send_xieyi_data[send_data_lenth]+=send_xieyi_data[hejiaoyan];
+		send_xieyi_data[send_data_lenth] += send_xieyi_data[hejiaoyan];
 	}
 	send_data_lenth++;
 	send_xieyi_data[send_data_lenth++] = 0x16;
-	Uart0_Tx_Send(send_xieyi_data,send_data_lenth);
-	PC_Chuankou_tongxin_Debug_send(send_xieyi_data,send_data_lenth);
+	Uart0_Tx_Send(send_xieyi_data, send_data_lenth);
+	// PC_Chuankou_tongxin_Debug_send(send_xieyi_data,send_data_lenth);
 }
-
-
-
