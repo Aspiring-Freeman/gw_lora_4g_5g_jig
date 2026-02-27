@@ -8,6 +8,7 @@
 #include "LED_CTRL.h"
 #include "Test_List.h"
 #include "WTD.h"
+// 版本：VER2.0
 uint8_t Debug_Mode = 0;
 uint16_t Debug_print_time = 10000;
 void test_Init()
@@ -50,7 +51,7 @@ int main(void)
 
 	while (1)
 	{
-		if (Debug_print_time == 0) // 修复：使用 == 进行比较
+		if (Debug_print_time == 0) //
 		{
 			Debug_print_time = 10000;
 			DeBug_print("[Debug] Still alive, station=%d\r\n", Test_jiejuo_jilu.gongwei);

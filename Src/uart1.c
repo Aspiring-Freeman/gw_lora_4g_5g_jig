@@ -97,7 +97,7 @@ void Uart1_Tx_Send(uint8_t zufuchua[], uint16_t lenth)
     {
         return;
     }
-    chaoshi_dengdai = 100;
+    chaoshi_dengdai = 1000;
     // 多包发送时，会等待上一包发送完再发送下一包
     while (UART1Op.TxLen != UART1Op.TxOpc && chaoshi_dengdai != 0)
     {
@@ -111,14 +111,12 @@ void Uart1_Tx_Send(uint8_t zufuchua[], uint16_t lenth)
     send_over_flag = 0; // 清除上次发送完成标志，防止Uart1_Rx_rec提前切换GPIO方向
     UART_TX_state_change(1);
     // 中断发送数组
-    __disable_irq();
     UART1Op.TxBuf = send_data_zancun_1;
     UART1Op.TxLen = lenth;
-    UART1Op.TxOpc = 0 + 1;
+    UART1Op.TxOpc = 1;
     FL_UART_ClearFlag_TXShiftBuffEmpty(UART1);
     FL_UART_EnableIT_TXShiftBuffEmpty(UART1);
     FL_UART_WriteTXBuff(UART1, UART1Op.TxBuf[0]);
-    __enable_irq();
 }
 
 void MF_UART1_Init(void)
@@ -165,7 +163,7 @@ void UART1_MF_NVIC_Init(void)
 {
     FL_NVIC_ConfigTypeDef InterruptConfigStruct;
 
-    InterruptConfigStruct.preemptPriority = 0x00;
+    InterruptConfigStruct.preemptPriority = 0x02;
     FL_NVIC_Init(&InterruptConfigStruct, UART1_IRQn);
 }
 

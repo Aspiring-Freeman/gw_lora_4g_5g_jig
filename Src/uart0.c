@@ -91,14 +91,12 @@ void Uart0_Tx_Send(uint8_t zufuchua[], uint16_t lenth)
     FL_DelayMs(1);
     memcpy(send_data_zancun_0, zufuchua, lenth);
     // 中断发送数组
-    __disable_irq();
     UART0Op.TxBuf = send_data_zancun_0;
     UART0Op.TxLen = lenth;
     UART0Op.TxOpc = 0 + 1;
     FL_UART_ClearFlag_TXShiftBuffEmpty(UART0);
     FL_UART_EnableIT_TXShiftBuffEmpty(UART0);
     FL_UART_WriteTXBuff(UART0, UART0Op.TxBuf[0]);
-    __enable_irq();
 }
 
 void MF_UART0_Init(void)
@@ -145,7 +143,7 @@ void UART0_MF_NVIC_Init(void)
 {
     FL_NVIC_ConfigTypeDef InterruptConfigStruct;
 
-    InterruptConfigStruct.preemptPriority = 0x02;
+    InterruptConfigStruct.preemptPriority = 0x00;
     FL_NVIC_Init(&InterruptConfigStruct, UART0_IRQn);
 }
 

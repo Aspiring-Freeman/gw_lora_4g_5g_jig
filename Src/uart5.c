@@ -82,14 +82,12 @@ void Uart5_Tx_Send(uint8_t zufuchua[], uint16_t lenth)
     FL_DelayMs(1);
     memcpy(send_data_zancun, zufuchua, lenth);
     // 中断发送数组
-    __disable_irq();
     UART5Op.TxBuf = send_data_zancun;
     UART5Op.TxLen = lenth;
     UART5Op.TxOpc = 0 + 1;
     FL_UART_ClearFlag_TXShiftBuffEmpty(UART5);
     FL_UART_EnableIT_TXShiftBuffEmpty(UART5);
     FL_UART_WriteTXBuff(UART5, UART5Op.TxBuf[0]);
-    __enable_irq();
 }
 void Uart5_Rx_rec()
 {
